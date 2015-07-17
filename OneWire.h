@@ -200,14 +200,7 @@ class OneWire
     // get garbage.  The order is deterministic. You will always get
     // the same devices in the same order.
     uint8_t search(uint8_t *newAddr);
-#endif	
-	
-	
-	void reset_sequence();
-	
-    // returns true if successful, if successful it puts a pointer to an 8 byte unique device address in addr
-	bool sequence(uint8_t *newAddr);
-
+#endif
 
 #if ONEWIRE_CRC
     // Compute a Dallas Semiconductor 8 bit CRC, these are used in the
@@ -252,9 +245,6 @@ class OneWire
     static uint16_t crc16(const uint8_t* input, uint16_t len, uint16_t crc = 0);
 #endif
 #endif
-private:
-	bool chainOn();
-	bool chainOff();	
 };
 
 #endif
