@@ -12,14 +12,15 @@ class OneWireSequence : public OneWire
 {
   public:
     using OneWire::OneWire;
-		// This subclass API imlements methods with the same signatures and usage as the search function,
-		// but which return devices in order.
 
-		// Returns true if reset succeeds.
+    // This subclass API imlements methods with the same signatures and usage as the search function,
+    // but which return devices in order.
+
+    // Returns true if reset succeeds.
     bool reset_sequence();
 
     // Returns true if there's another device available,
-		// and fills an 8-byte array parameter newAddr with the device's unique address.
+    // and fills an 8-byte array parameter newAddr with the device's unique address.
     bool sequence(uint8_t *newAddr);
 		
   private:
